@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Finder</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+
+
+
+<body>
+
+
+  <header>
+
+    <a href="index.html"><img class="logo" src="Thunder NFT-02.png" alt="logo"></a>
+      
+    <nav>
+      
+      
+         <ul class="nav_links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="marketplace.html">MarketPlace</a></li>
+              <li><a href="comunidad.html">Comunidad</a></li>
+              <li><a href="creadores.html">Creadores</a></li>
+              <a class="cta" ><button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Connect Wallet</button></a>
+         </ul>
+     
+    </nav>
+
+  </header>
+
+
+
+
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Explorar</button>
+
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Filtrar</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+      ...
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Precio
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>  
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Categoria
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Collectiones
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+<!--   ------------formularioFiltro01---------------- -->
+
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Precio Maximo</label>
+      <input type="number" step="0.01" class="form-control" id="precioMaximo" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Precio Mínimo</label>
+      <input type="number" step="0.01" class="form-control" id="precioMinimo">
+    </div>
+   
+    <button type="submit" class="btn btn-primary" id="prcBtn">Buscar</button>
+  </form>
+
+<!--   ------------ventanaModal01---------------- -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formularioLI">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">User Name</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label  for="message-text" class="col-form-label">Password</label>
+              <input type="Password" class="form-control" id="message-text"></input>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="logIn">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+   
+
+
+
+    
+
+  
+  
+
+    <h1>Discover</h1>
+
+    <h2></h2>
+
+    <div class="nftFilter">
+
+    </div>
+
+    <!--   ------------contenedor de Cards---------------- -->
+
+   <section class="cardContainers">
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.seadn.io/files/fac77a3bb1ec7fbb51d28d6b1d467905.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CryptoPunk #3619</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              
+            </ul>
+            <div class="card-body">
+              <li><a id="card01" href="https://opensea.io/assets/ethereum/0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb/3619/">Open Sea</a></li>
+              <li><a id="card02" href="https://rarity.tools/cryptopunks/view/3619">View Rarity</a></li>
+
+            </div>
+        </div>
+          
+
+
+
+
+        
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.seadn.io/files/16d8848ffd08452b88524d60169b6431.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CryptoPunk #3620</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://img.seadn.io/files/4f89f6d7326a8eddb33e37e5c91b84d5.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CryptoPunk #3621</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+             
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.seadn.io/files/11f9c6ad34f4c42ba7b7c5aef73f2563.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CryptoPunk #3622</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+       </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.seadn.io/files/62c19a8d17ffc0cd2f9e84ebb93c81e0.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CryptoPunk #3623</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+          <img src="https://img.seadn.io/files/676a9942da933ba7ce6035549fedfd93.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">CryptoPunk #3624</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.seadn.io/files/a0906f05cedb6101e587840fd4885877.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Los Muertos #9259</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+         
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.seadn.io/files/3fbe57d9ed581192c8dc3971a7ffa1a0.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Los Muertos #9260</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+  
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.seadn.io/files/63bd5311253851c092eeb899bbd0d7fa.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Los Muertos #9261</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.seadn.io/files/ee5a50100c5217b5846189f56e56b3c6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Los Muertos #9262</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.seadn.io/files/1f5c84783ff733cf58953447afa1dd3c.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Los Muertos #9263</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+              <img src="https://img.seadn.io/files/cd2b9f27abe3b7997f748f85890455bc.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Los Muertos #9264</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+              
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+      </div>
+
+   
+
+      
+    </section>
+
+  
+
+    </div>
+
+    </div>
+
+    <footer>
+    
+    </footer>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <script src="objects.js"></script>
+    
+  
+
+</body>
+
+
+</html>
