@@ -185,7 +185,7 @@ button:hover{
 .card-img-top{
     border-radius: 6px;
     width: 100%;
-    height: 210px;
+    height: 280px;
 }
 
 .card-title{
@@ -217,42 +217,62 @@ button:hover{
 
 /* ---------- Contenedor de Tarjetas NFT ------------- */
 
+
 .contenedorCards {
-    padding-top: 200px;
+    
     gap: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px 1fr));
+    display: flex;    
+    max-width: 1500px;
+    margin-left: 200px;
+    flex-wrap: wrap;
+    justify-content:right;
+    margin-right: 20px;   
+    margin-top: 30px;
+   
+   
     
     
 }
 
 .cardAA{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 250px;
-    height: 360px;
     
 
+    
+    width: 250px;
+    height: 360px;
+    padding: 10px;
     background: #09002E;
     border: 2px solid #DF1073;
     border-radius: 15px;
-    align-content: center;
+
+    overflow: hidden;
+    cursor: default;
+    transition: all 400ms ease;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0.2);
+    
+    
+}
+
+.cardAA:hover{
+    box-shadow: 5px 5px 20px rgb(194, 0, 107);
+    transform: translateY(-3%);
 }
 
 
 .nftImg01 {
     
-    max-height: 200px;
-    border-radius: 15px;
-    margin: 10px;
-    
-    
+    width: 100%;
+    height: auto;
+    position: relative;
     
 }
 
 .imagenNftCard{
-    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    
+    
+    
 }
 
 .creador{
@@ -281,16 +301,21 @@ button:hover{
 .creador-descrip{
     font-size: 10pt;
     color: #edf0f1;
-    margin: 5px;
     font-family: "Montserrat";
+    position: relative;
+    top: 10px;
+    left: 10px;
+    bottom: 5px;
 }
 
 .creador-nombre{
     font-size: 12pt;
     color: #edf0f1;
-    margin-left: 5px;
-    
     font-family: "Montserrat";
+    font-weight: 900;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
 }
 
 .nombrenftdiv{
@@ -298,12 +323,50 @@ button:hover{
 }
 
 .nombre-nft{
-    font-size: 12pt;
+    font-size: 10pt;
     color: #edf0f1;
-   
     font-family: "Montserrat";
-    
+    position: relative;
+    left: 10px;
+    top: 15px;    
 }
+
+.casilla-precio{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+    top: 20px;
+}
+.price-crypto{
+    width: 80px;
+    height: 40px;
+    color:#DF1073 
+}
+
+.ver{
+    border-radius: 15px;
+    color:#edf0f1;
+    width: 80px;
+    height: 40px;
+}
+
+
+
+.filtro-nfts{
+background-color: #DF1073;
+position: fixed;
+left: 0px;
+top: 120px;
+height: 600px;
+width: 300px;
+border-radius: 0px 20px 20px 0px;
+}
+
+
+
 
 
 
