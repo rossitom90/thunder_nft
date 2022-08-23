@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@500&display=swap');
+
+/* ---------- Principal index ------------- */
+
+
 body{
     background-color: #09002E;
 }
@@ -210,6 +214,9 @@ button:hover{
    transition: all 500ms ease;
 }
 
+
+/* ---------- Contenedor de Tarjetas NFT ------------- */
+
 .contenedorCards {
     padding-top: 200px;
     gap: 30px;
@@ -233,20 +240,72 @@ button:hover{
     align-content: center;
 }
 
-.maskImg{
-    max-width: 200px;
+
+.nftImg01 {
+    
     max-height: 200px;
     border-radius: 15px;
-    border: 2px solid #DF1073;
+    margin: 10px;
+    
+    
     
 }
 
-.imagen01{
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-    padding: 10px;
+.imagenNftCard{
+    max-width: 100%;
 }
+
+.creador{
+    width: 100%;
+    height: 50px;
+    background: rgba(217, 217, 217,0.3);
+    border-radius: 0px 0px 15px 15px;
+    backdrop-filter: blur(2px);
+    margin-top: -55px;
+    display: flex;
+    
+    
+}
+.texto-creador{
+    font-family: "Montserrat";
+   
+}
+
+.imgCreador{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.creador-descrip{
+    font-size: 10pt;
+    color: #edf0f1;
+    margin: 5px;
+    font-family: "Montserrat";
+}
+
+.creador-nombre{
+    font-size: 12pt;
+    color: #edf0f1;
+    margin-left: 5px;
+    
+    font-family: "Montserrat";
+}
+
+.nombrenftdiv{
+    top: 300px;
+}
+
+.nombre-nft{
+    font-size: 12pt;
+    color: #edf0f1;
+   
+    font-family: "Montserrat";
+    
+}
+
+
 
 title {
     
