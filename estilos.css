@@ -230,11 +230,20 @@ button:hover{
     background: #09002E;
     border: 2px solid #DF1073;
     border-radius: 15px;
+    align-content: center;
+}
+
+.maskImg{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 15px;
+    border: 2px solid #DF1073;
+    
 }
 
 .imagen01{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: auto;
     border-radius: 15px;
     padding: 10px;
 }
