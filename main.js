@@ -1,14 +1,12 @@
 //Simulación buscador de NFT
 
+//------------Connectar Wallet - Local Storage -----------------
 
 
-//------------Connect Wallet - Local Storage -----------------
-
-localStorage.setItem("Usuario", "coderUsuario");
 localStorage.setItem("Password", "1234");
 
-let butlogIn = document.getElementById("unlockMeta")
-butlogIn.addEventListener ("click", envioDatos);
+let butUnlock = document.getElementById("unlockMeta");
+butUnlock.addEventListener ("click", envioDatos);
 
 
 
@@ -17,20 +15,19 @@ function envioDatos(){
     accesoUsuario();
 }
 
-let obtenUsuario = localStorage.getItem('Usuario');
+
 let obtenPassword = localStorage.getItem('Password');
 
 //------------Connect Wallet - Local Storage -----------------
 
 function accesoUsuario () {
-
-    let usuarioA = document.getElementById('recipient-name').value;    
+ 
     let passwordA = document.getElementById("password").value; 
 
-    console.log("el ingreso es: " + usuarioA);
+
     console.log("La contraseña es: " + passwordA);
 
-    if(usuarioA === obtenUsuario && passwordA === obtenPassword){
+    if( passwordA === obtenPassword){
         console.log("USUARIO CORRECTO puede ingresar, redirigiendo...");
         location.replace("marketplace.html");
     }else{
@@ -44,10 +41,12 @@ function accesoUsuario () {
 }
 
 //------------Libreria Sweet Alert!-----------------
+
 function dispara(){
+
     Swal.fire({
         title: 'Usuario y/o Contraseña incorrectas!',
-        text: '',
+        text: 'Contraseña incorrecta, intente nuevamente',
         icon: 'error',
         confirmButtonText: 'Reintentar'
     })
@@ -407,7 +406,7 @@ alert ("la suma de los NFT disponibles de Los Muertos World en ETH es: " + nftLM
 
 
 
-const exampleModal = document.getElementById('exampleModal')
+/* const exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', event => {
   // Button that triggered the modal
   const button = event.relatedTarget
@@ -422,7 +421,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
 
   modalTitle.textContent = `New message to ${recipient}`
   modalBodyInput.value = recipient
-})
+}) */
 
 
 //------------Barra Cryptos - API Coingecko -----------------
