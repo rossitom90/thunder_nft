@@ -102,10 +102,8 @@ $.ajax(liveprice).done(function(response){
 
 //------------Pagin 2: marketplace -----------------------------------
 
-fetch('/nft.json')
 
-.then( (respuesta) => respuesta.json())
-.then((data) =>{console.log(data)})
+
 
 
 
