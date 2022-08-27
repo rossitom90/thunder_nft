@@ -1,5 +1,8 @@
 //Simulación buscador de NFT
 
+
+//------------Pagin 1: index -----------------------------------
+
 //------------Connectar Wallet - Local Storage -----------------
 
 
@@ -54,10 +57,67 @@ function dispara(){
 
 }
 
+
+//------------Barra Cryptos - API Coingecko -----------------
+
+let btc = document.getElementById("bitcoin");
+let eth = document.getElementById("ethereum");
+let usdt = document.getElementById("tether");
+let ada = document.getElementById("cardano");
+let sol = document.getElementById("solana");
+let shib = document.getElementById("shibainu");
+let matic = document.getElementById("polygon");
+let daii = document.getElementById("dai");
+let uni = document.getElementById("uniswap");
+let ltc = document.getElementById("litecoin");
+let cake = document.getElementById("pancake");
+
+let liveprice = {
+    "async": true,
+    "scroosDomain": true,
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Ccardano%2Cshiba-inu%2Cmatic-network%2Cuniswap%2Clitecoin%2Cdai%2Ccake%2Ctether&vs_currencies=usd",
+    "method": "GET",
+    "headers": {}
+}
+
+$.ajax(liveprice).done(function(response){
+   
+    
+    btc.innerHTML = response.bitcoin.usd;
+    eth.innerHTML = response.ethereum.usd;
+    usdt.innerHTML = response.tether.usd;
+    ada.innerHTML = response.cardano.usd;
+    sol.innerHTML = response.solana.usd;
+   /*  shib.innerHTML = response.shibainu.usd;
+    matic.innerHTML = response.polygon.usd; */
+    daii.innerHTML = response.dai.usd;
+    uni.innerHTML = response.uniswap.usd;
+    ltc.innerHTML = response.litecoin.usd;
+    /* cake.innerHTML = response.pancake.usd; */
+
+});
+
+
+
+
+//------------Pagin 2: marketplace -----------------------------------
+
+fetch('/nft.json')
+
+.then( (respuesta) => respuesta.json())
+.then((data) =>{console.log(data)})
+
+
+
+
+
+
+
+
 console.log("--------------Coleccion de NFTs---------------")
 
 //Coleccion Crypto Punk
-const CryptoPunk = {
+/* const CryptoPunk = {
     collectionName: "Crypto Punk",
     description: "CryptoPunks launched as a fixed set of 10,000 items in mid-2017 and became one of the inspirations for the ERC-721 standard. They have been featured in places like The New York Times, Christies of London, Art|Basel Miami, and The PBS NewsHour.",
     creator: "none",
@@ -67,11 +127,11 @@ const CryptoPunk = {
     totalOwners: 3450,
     floorPrice: 0.5,
     
-};
+}; */
 //------------Desestructuración 01-----------------
 console.log("--------------Desestructuración Crypto Punk---------------")
 
-const {collectionName, floorPrice} = CryptoPunk
+/* const {collectionName, floorPrice} = CryptoPunk
 
 console.log(collectionName);
 console.log(floorPrice);
@@ -86,15 +146,15 @@ const LosMuertosWorld = {
     volumeUnit: "Eth",
     totalOwners: 2900,
     floorPrice: 0.28,
-};
+}; */
 
 
-console.log("Las Colecciones son " + CryptoPunk.collectionName + " y " + LosMuertosWorld.collectionName)
+/* console.log("Las Colecciones son " + CryptoPunk.collectionName + " y " + LosMuertosWorld.collectionName) */
 
 
-console.log("--------------Coleccion Crypto Punk---------------")
+/* "--------------Coleccion Crypto Punk---------------" */
 
-const nftCryptoPunk = [
+/* const nftCryptoPunk = [
     {
     id: 1,
     name: "CryptoPunk #3619",
@@ -180,57 +240,58 @@ const nftCryptoPunk = [
     favourites: 6,
     ownedBy: "Thomson19",
 
-}];
+}]; */
 
 //------------Spread 02-----------------
-console.log("--------------Spread Crypto Punk---------------")
 
-const {...tokenId} = nftCryptoPunk
+/* "--------------Spread Crypto Punk---------------" */
 
-console.log(tokenId);
+/* const {...tokenId} = nftCryptoPunk
+
+console.log(tokenId); */
 
 
 /* ------------------- LOCAL STORAGE "Crypto Punk"-------------------*/
 
 
 
-const enJSONCP  = JSON.stringify(nftCryptoPunk);
+/* const enJSONCP  = JSON.stringify(nftCryptoPunk);
 
 console.log(enJSONCP); 
 console.log(typeof nftCryptoPunk); //object
 console.log(typeof enJSONCP); //string
 
 
-const set = localStorage.setItem("nft Crypto Punk", enJSONCP);
+const set = localStorage.setItem("nft Crypto Punk", enJSONCP); */
 
 
 
 console.log("--------------Filtrar NFT Crypto Punk---------------")
 
 
-const resultadoFavCr = nftCryptoPunk.filter((fav) => fav.favourites >= 12)
+/* const resultadoFavCr = nftCryptoPunk.filter((fav) => fav.favourites >= 12)
 
 console.log(resultadoFavCr)
 
 /* alert("El resultado es: " + resultadoFavCr.length) */
 
-const resultadoPriceCR =  nftCryptoPunk.filter((prc) => prc.lastPrice <= 0.19)
+/* const resultadoPriceCR =  nftCryptoPunk.filter((prc) => prc.lastPrice <= 0.19)
 
-console.log(resultadoPriceCR)
+console.log(resultadoPriceCR) */
 
-/* alert("El resultado es: " + resultadoPriceCR.length) */
+/* alert("El resultado es: " + resultadoPriceCR.length) */ 
 
 
-console.log("--------------Sumar precio de Crypto Punk disponibles---------------")
+/* "--------------Sumar precio de Crypto Punk disponibles---------------" */
 
-const nftCPdisponibles = nftCryptoPunk.reduce((acc, el) => acc + el.lastPrice, 0)
+/* const nftCPdisponibles = nftCryptoPunk.reduce((acc, el) => acc + el.lastPrice, 0)
 console.log("la suma de los NFT disponibles en ETH es: " + nftCPdisponibles) 
+ */
 
 
+/* "--------------Coleccion Los Muertos World---------------" */
 
-console.log("--------------Coleccion Los Muertos World---------------")
-
-const nftLosMuertos = [{
+/* const nftLosMuertos = [{
     id: 1,
     name: "Los Muertos #9259",
     collection: LosMuertosWorld.collectionName,
@@ -314,18 +375,21 @@ const nftLosMuertos = [{
     views: 18,
     favourites: 10,
     ownedBy: "7BA997"},
-];
+]; */
 
 /* ------------------- LOCAL STORAGE "Los Muertos"-------------------*/
 
-const MuertosJson = JSON.stringify(nftLosMuertos);
+/* const MuertosJson = JSON.stringify(nftLosMuertos);
 
-localStorage.setItem("Los muertos JSON", MuertosJson);
+localStorage.setItem("Los muertos JSON", MuertosJson); */
+
+
+
 
 
 //Filtro 1
 
-console.log("--------------Filtro: Minima cantidad de favoritos - NFT Los Muertos World---------------")
+/* "--------------Filtro: Minima cantidad de favoritos - NFT Los Muertos World---------------" */
 
 
 /* let ingresoFav = parseInt(prompt("ingresar minimo de favoritos del NFT buscado:")); */
@@ -337,9 +401,11 @@ console.table(resultadoFav.concat()) */
 
 /* alert("Resultado de la búsqueda: " + resultadoFav.length); */
 
+
+
 //Filtro 2
 
-console.log("--------------Filtro: Precio límite en ETH - NFT Los Muertos World---------------")
+/* "--------------Filtro: Precio límite en ETH - NFT Los Muertos World---------------" */
 
 /* let ingresoprcMax = parseInt(prompt("ingresar precio máximo en ETH: ")); */
 
@@ -424,44 +490,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
 }) */
 
 
-//------------Barra Cryptos - API Coingecko -----------------
 
-let btc = document.getElementById("bitcoin");
-let eth = document.getElementById("ethereum");
-let usdt = document.getElementById("tether");
-let ada = document.getElementById("cardano");
-let sol = document.getElementById("solana");
-let shib = document.getElementById("shibainu");
-let matic = document.getElementById("polygon");
-let daii = document.getElementById("dai");
-let uni = document.getElementById("uniswap");
-let ltc = document.getElementById("litecoin");
-let cake = document.getElementById("pancake");
-
-let liveprice = {
-    "async": true,
-    "scroosDomain": true,
-    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Ccardano%2Cshiba-inu%2Cmatic-network%2Cuniswap%2Clitecoin%2Cdai%2Ccake%2Ctether&vs_currencies=usd",
-    "method": "GET",
-    "headers": {}
-}
-
-$.ajax(liveprice).done(function(response){
-   
-    
-    btc.innerHTML = response.bitcoin.usd;
-    eth.innerHTML = response.ethereum.usd;
-    usdt.innerHTML = response.tether.usd;
-    ada.innerHTML = response.cardano.usd;
-    sol.innerHTML = response.solana.usd;
-   /*  shib.innerHTML = response.shibainu.usd;
-    matic.innerHTML = response.polygon.usd; */
-    daii.innerHTML = response.dai.usd;
-    uni.innerHTML = response.uniswap.usd;
-    ltc.innerHTML = response.litecoin.usd;
-    /* cake.innerHTML = response.pancake.usd; */
-
-});
 
 
 //------------Envio de Mail con Fetch-----------------
