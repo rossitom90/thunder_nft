@@ -1,23 +1,27 @@
+const contenedorT = document.getElementById('contenedorDeTarjetas');
 
 fetch('/nft.json')
 
 .then( (respuesta) => respuesta.json())
-.then( (data) => {
+.then( (datanft) => {
  
-    data.forEach((nftTarjeta) => {
+    datanft.forEach((nftTarjeta) => {
+
         const tarjeta = document.createElement('tarjeta')
-        tarjeta.innerHTML = 
+      
+       tarjeta.innerHTML =
+       
         `
         <div class="cardAA">
                 
             <div class="nftImg01">
-                <img src="https://lh3.googleusercontent.com/ow2PqtN6Zz3qC5ThHRzsZOngRhh3y0JtvPuaQ_sib7FWpzAveeItbvUQul1ocsZv_JqUwvXmonPVKACSQ0UTswGWnwecYGHb4zfM=s0" class="imagenNftCard">
+                <img src="${nftTarjeta.img}" class="imagenNftCard">
 
                 <div class="creador">
-                <img src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfHwwfHw%3D&w=1000&q=80" class="imgCreador">
+                <img src="${nftTarjeta.imgCreator}" class="imgCreador">
                     <div class="texto-creador">
                         <p class="creador-descrip">Creador</p>
-                        <p class="creador-nombre">${nftTarjeta.ownedBy}</p>
+                        <p class="creador-nombre">${nftTarjeta.creatorName}</p>
                     </div>
                 </div>
             </div>
@@ -27,16 +31,18 @@ fetch('/nft.json')
 
             <div class="casilla-precio">
                 <p class="price-crypto">${nftTarjeta.lastSale}</p>
-                <button class="ver">ver</button>
+                <button class="ver" id="${nftTarjeta.id}">ver</button>
             </div>
 
         `
-
-        lista.append(tarjeta)
+      contenedorT.append(tarjeta);
+        
     })
 })
 
-const contenedores = document.getElementsByClassName("contenedorCards")
+
+
+
 
 
 {/* <div class="cardAA">
