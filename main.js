@@ -112,20 +112,7 @@ $.ajax(liveprice).done(function(response){
 
 
 
-console.log("--------------Coleccion de NFTs---------------")
 
-//Coleccion Crypto Punk
-/* const CryptoPunk = {
-    collectionName: "Crypto Punk",
-    description: "CryptoPunks launched as a fixed set of 10,000 items in mid-2017 and became one of the inspirations for the ERC-721 standard. They have been featured in places like The New York Times, Christies of London, Art|Basel Miami, and The PBS NewsHour.",
-    creator: "none",
-    totalItems: 10000,
-    totalVolume:954000,
-    volumeUnit: "Eth",
-    totalOwners: 3450,
-    floorPrice: 0.5,
-    
-}; */
 //------------Desestructuración 01-----------------
 console.log("--------------Desestructuración Crypto Punk---------------")
 
@@ -149,96 +136,6 @@ const LosMuertosWorld = {
 
 /* console.log("Las Colecciones son " + CryptoPunk.collectionName + " y " + LosMuertosWorld.collectionName) */
 
-
-/* "--------------Coleccion Crypto Punk---------------" */
-
-/* const nftCryptoPunk = [
-    {
-    id: 1,
-    name: "CryptoPunk #3619",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3619 from CriptoPunk",
-    lastPrice: 0.19,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9116,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 18,
-    favourites: 130,
-    ownedBy: "Thomson19"},
-    {
-    id: 2,
-    name: "CryptoPunk #3620",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3620 from CriptoPunk",
-    lastPrice: 0.17,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9117,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 24,
-    favourites: 35,
-    ownedBy: "Thomson19"},
-    {
-    id: 3,
-    name: "CryptoPunk #3621",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3621 from CriptoPunk",
-    lastPrice: 0.2,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9118,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 18,
-    favourites: 19,
-    ownedBy: "Thomson19"},
-    {
-    id: 4,
-    name: "CryptoPunk #3622",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3622 from CriptoPunk",
-    lastPrice: 0.24,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9119,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 12,
-    favourites: 11,
-    ownedBy: "Thomson19"},
-    {
-    id: 5,
-    name: "CryptoPunk #3623",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3623 from CriptoPunk",
-    lastPrice: 0.31,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9120,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 28,
-    favourites: 13,
-    ownedBy: "Thomson19"},
-    {
-    id: 6,
-    name: "CryptoPunk #3624",
-    collection: CryptoPunk.collectionName,
-    description: "CryptoPunk #3624 from CriptoPunk",
-    lastPrice: 0.2,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FD",
-    tokenId: 9121,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 8,
-    favourites: 6,
-    ownedBy: "Thomson19",
-
-}]; */
 
 //------------Spread 02-----------------
 
@@ -287,93 +184,7 @@ console.log("la suma de los NFT disponibles en ETH es: " + nftCPdisponibles)
  */
 
 
-/* "--------------Coleccion Los Muertos World---------------" */
 
-/* const nftLosMuertos = [{
-    id: 1,
-    name: "Los Muertos #9259",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9259 by LosMuertos",
-    lastPrice: 0.21,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9259,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 10,
-    favourites: 5,
-    ownedBy: "7BA997"},
-    {
-    id: 2,
-    name: "Los Muertos #9260",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9260 by LosMuertos",
-    lastPrice: 0.3,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9260,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 12,
-    favourites: 5,
-    ownedBy: "7BA997"},
-    {
-    id: 3,
-    name: "Los Muertos #9261",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9261 by LosMuertos",
-    lastPrice: 0.25,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9261,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 13,
-    favourites: 8,
-    ownedBy: "7BA997"},
-    {
-    id: 4,
-    name: "Los Muertos #9262",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9262 by LosMuertos",
-    lastPrice: 0.28,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9262,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 21,
-    favourites: 12,
-    ownedBy: "7BA997"},
-    {
-    id: 5,
-    name: "Los Muertos #9263",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9263 by LosMuertos",
-    lastPrice: 0.35,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9263,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 28,
-    favourites: 12,
-    ownedBy: "7BA997"},
-    {
-    id: 6,
-    name: "Los Muertos #9264",
-    collection: LosMuertosWorld.collectionName,
-    description: "Los Muertos #9264 by LosMuertos",
-    lastPrice: 0.41,
-    unidad: "eth",
-    contractAdress: "0xC878671fF88f1374d2186127573E4A63931370FC",
-    tokenId: 9264,
-    tokenStandards: "Erc-721",
-    blockchain: "Ethereum",
-    views: 18,
-    favourites: 10,
-    ownedBy: "7BA997"},
-]; */
 
 /* ------------------- LOCAL STORAGE "Los Muertos"-------------------*/
 
