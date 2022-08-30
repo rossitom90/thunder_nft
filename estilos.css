@@ -260,14 +260,6 @@ button:hover{
 }
 
 
-.nftImg01 {
-    
-    width: 100%;
-    height: auto;
-    position: relative;
-    
-}
-
 .imagenNftCard{
     width: 100%;
     border-radius: 10px;
@@ -352,6 +344,15 @@ button:hover{
     color:#edf0f1;
     width: 80px;
     height: 40px;
+}
+
+.fondo_card{
+   
+   
+    width:auto;
+    height: 45%;
+    z-index: 8;
+    background: white;
 }
 
 
