@@ -1,3 +1,5 @@
+// ----------------------- Tarjetas NFT en contenedor ------------------------------
+
 const contenedorT = document.getElementById('contenedorDeTarjetas');
 
 fetch('/nft.json')
@@ -42,4 +44,38 @@ fetch('/nft.json')
         
     })
 })
+
+// ----------------------- Filtro de Tarjetas ------------------------------
+// ------------ Palabra clave:
+let palabraClave =  document.getElementById("palabraClav").valor;
+let btnPalabra = document.getElementById("butPalabra");
+
+btnPalabra.onclick("click", valorPalabra);
+
+function valorPalabra(){
+    console.log("palabraClave");
+}
+
+
+// ------------ Minimos y Maximos: 
+
+let minPRC = document.getElementById("minInput").value;
+let maxPRC = document.getElementById("maxInput").value;
+let butMinMax = document.getElementById("butMaxMin");
+
+butMinMax.onclick("click", valoresMaxMin);
+
+function valoresMinMax(){
+
+    if(minPRC>0 && maxPRC<minPRC){
+
+    }else{
+
+    }
+
+
+
+}
+
+/* productos.filter(el=>el.categoria == “frutas”) */
 
