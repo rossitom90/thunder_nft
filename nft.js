@@ -46,20 +46,55 @@ fetch('/nft.json')
 })
 
 // ----------------------- Filtro de Tarjetas ------------------------------
+
 // ------------ Palabra clave:
-let palabraClave =  document.getElementById("palabraClav").valor;
+l/* et palabraClave =  document.getElementById("palabraClav").value;
 let btnPalabra = document.getElementById("butPalabra");
 
-btnPalabra.onclick("click", valorPalabra);
+btnPalabra.addEventListener("click", valorPalabra);
 
 function valorPalabra(){
-    console.log("palabraClave");
-}
+    
+    console.log(palabraClave);
+
+    if(palabraClave == ${nftTarjeta.name}){
+        tarjeta.innerHTML = 
+        `
+        <div class="cardAA">
+                
+            <div class="nftImg01">
+                <img src="${nftTarjeta.img}" class="imagenNftCard">
+
+                <div class="creador">
+                    <img src="${nftTarjeta.imgCreator}" class="imgCreador">
+                    <div class="texto-creador">
+                        <p class="creador-descrip">Creador</p>
+                        <p class="creador-nombre">${nftTarjeta.creatorName}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fondo_card">
+                    <div class="nombrenftdiv">
+                        <p class="nombre-nft">${nftTarjeta.name}</p>
+                    </div>
+
+                <div class="casilla-precio">
+                    <p class="price-crypto">${nftTarjeta.lastSale}</p>
+                    <button class="ver" id="${nftTarjeta.id}">ver</button>
+                </div>
+             </div> 
+        </div>
+        `
+    }else{
+        console.log("Ningun elemento coincide con la busqueda");
+    }
+} */
 
 
 // ------------ Minimos y Maximos: 
 
-let minPRC = document.getElementById("minInput").value;
+/* let minPRC = document.getElementById("minInput").value;
 let maxPRC = document.getElementById("maxInput").value;
 let butMinMax = document.getElementById("butMaxMin");
 
@@ -75,7 +110,7 @@ function valoresMinMax(){
 
 
 
-}
+} */
 
 /* productos.filter(el=>el.categoria == “frutas”) */
 
