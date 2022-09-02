@@ -146,18 +146,6 @@ const LosMuertosWorld = {
 console.log(tokenId); */
 
 
-/* ------------------- LOCAL STORAGE "Crypto Punk"-------------------*/
-
-
-
-/* const enJSONCP  = JSON.stringify(nftCryptoPunk);
-
-console.log(enJSONCP); 
-console.log(typeof nftCryptoPunk); //object
-console.log(typeof enJSONCP); //string
-
-
-const set = localStorage.setItem("nft Crypto Punk", enJSONCP); */
 
 
 
@@ -182,15 +170,6 @@ console.log(resultadoPriceCR) */
 /* const nftCPdisponibles = nftCryptoPunk.reduce((acc, el) => acc + el.lastPrice, 0)
 console.log("la suma de los NFT disponibles en ETH es: " + nftCPdisponibles) 
  */
-
-
-
-
-/* ------------------- LOCAL STORAGE "Los Muertos"-------------------*/
-
-/* const MuertosJson = JSON.stringify(nftLosMuertos);
-
-localStorage.setItem("Los muertos JSON", MuertosJson); */
 
 
 
