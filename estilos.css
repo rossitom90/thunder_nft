@@ -650,7 +650,7 @@ position:absolute;
     line-height: 100px;
     text-align: center;
     margin: 2px;
-    display: none; /* Hidden by default */
+    display: none; 
   }
   
   /* Botonoes blockchains */
@@ -660,11 +660,12 @@ position:absolute;
   
   
   .btn {
-    border: none;
+    
     outline: none;
-    padding: 12px 16px;
+    border-radius: 50px;
     background-color: #f1f1f1;
     cursor: pointer;
+    
   }
   
 
@@ -676,6 +677,25 @@ position:absolute;
   .btn.active {
     background-color: #666;
     color: white;
+  }
+
+  .currencyFilt{
+    background: #DF1073;
+    display: flex;
+    padding: 15px;
+    max-height: 80px;
+  }
+
+  
+
+  .seccionBlock{
+    width: 100%;
+  }
+
+  .seccionPrecio{
+    margin-left: 20px;
+    
+    
   }
 
 

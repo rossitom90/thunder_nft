@@ -99,20 +99,6 @@ $.ajax(liveprice).done(function(response){
 
 
 
-
-//------------Pagin 2: marketplace -----------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
 //------------Desestructuración 01-----------------
 console.log("--------------Desestructuración Crypto Punk---------------")
 

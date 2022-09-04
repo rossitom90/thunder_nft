@@ -50,13 +50,27 @@
  <!--   ------------Formulario Filtro NFTs por blockchain---------------- -->
     <div class="currencyFilt">
                   
-      <button class="btn active" id="filterMain">Main</button>
-      <button class="btn" id="filterEthereum"> Ethereum</button>
-      <button class="btn" id="filterPolygon"> Polygon</button>
-      <button class="btn" id="filterSolana"> Solana</button>
+      <div class="seccionBlock">
+        <button  class="btn active" id="filterMain"> Main</button>
+        
+        <button class="btn" id="filterEthereum"><img src="https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg" style="width: 30px;height: 30px; border-radius: 100px;">
+          Ethereum</button>
+        <button class="btn" id="filterPolygon"><img src="https://seeklogo.com/images/P/polygon-matic-logo-1DFDA3A3A8-seeklogo.com.png" style="width: 30px;height: 30px; border-radius: 100px;">
+          Polygon</button>
+        <button class="btn" id="filterSolana"><img src="https://storage.googleapis.com/cjl-strapi-media/solana_logo_94aabc65a3/solana_logo_94aabc65a3.png" style="width: 30px;height: 30px; border-radius: 100px;">
+          Solana</button>
+      </div>
+
       
+
     </div> 
 
+    <div class="seccionPrecio">
+      <input id="ingresoMin" placeholder="Precio Min.." type="number">
+      <input id="ingresoMax" placeholder="Precio Max.." type="number">
+      <button class="btnIr" id="filterIr">Ir</button>
+  </div>
+  
       <div class="contenedorCards" id="contenedorDeTarjetas">
   
 
@@ -65,9 +79,6 @@
 
     
     
-     
-     
-        
 
   
 
