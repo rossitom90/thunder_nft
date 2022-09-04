@@ -224,7 +224,7 @@ button:hover{
     gap: 30px;
     display: flex;    
     max-width: 1500px;
-    margin-left: 200px;
+    margin-left: 0px;
     flex-wrap: wrap;
     justify-content:right;
     margin-right: 20px;   
@@ -263,6 +263,7 @@ button:hover{
 .imagenNftCard{
     width: 100%;
     border-radius: 10px;
+    height: 240px;
     
     
     
@@ -283,6 +284,8 @@ button:hover{
     font-family: "Montserrat";
    
 }
+
+
 
 .imgCreador{
     width: 40px;
@@ -333,9 +336,30 @@ button:hover{
     gap: 50px;
     top: 20px;
 }
-.price-crypto{
-    width: 80px;
+
+.blockCard{
+    color: white;
+    
+    font-size: small;
+   
+}
+
+.seccionprccrypto{
+    
+    display: flex;
+    border: #DF1073;
+    gap: 10px;
+    border: 1px solid #DF1073;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
     height: 40px;
+    justify-content: center;
+
+    
+}
+.price-crypto{
+    
     color:#DF1073 
 }
 
@@ -351,8 +375,8 @@ button:hover{
    
     width:auto;
     height: 45%;
-    z-index: 8;
-    background: white;
+    z-index: 20;
+    background:#09002E
 }
 
 
@@ -684,6 +708,7 @@ position:absolute;
     display: flex;
     padding: 15px;
     max-height: 80px;
+    
   }
 
   
@@ -693,7 +718,8 @@ position:absolute;
   }
 
   .seccionPrecio{
-    margin-left: 20px;
+    left: 300px;
+    width: 100%;
     
     
   }
