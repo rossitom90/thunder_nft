@@ -83,7 +83,7 @@ function eventEther(){
         console.log(resultadoEther);
 
    
-   resultadoEther.innerHTML = 
+   /* resultadoEther.innerHTML = 
        
         `
         <div class="cardAA">
@@ -111,7 +111,7 @@ function eventEther(){
                 </div>
              </div> 
         </div>
-       `
+       ` */
     
 }
 
@@ -132,7 +132,7 @@ function eventPoly(){
     console.log("Cantidad de NFT en blockchain Polygon...")
     console.log(resultadoPoly);
 
-   resultadoPoly.innerHTML = 
+   /* resultadoPoly.innerHTML = 
 
     `
     <div class="cardAA">
@@ -160,7 +160,7 @@ function eventPoly(){
             </div>
          </div> 
     </div>
-    `
+    ` */
    
 }
 
@@ -178,7 +178,7 @@ function eventSol(){
     console.log("Cantidad de NFT en blockchain Solana...")
     console.log(resultadoSol);
    
-    resultadoSol.innerHTML = 
+    /* resultadoSol.innerHTML = 
 
     `
     <div class="cardAA">
@@ -206,7 +206,7 @@ function eventSol(){
             </div>
          </div> 
     </div>
-    `
+    ` */
 }
 
 
