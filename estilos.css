@@ -718,10 +718,10 @@ position:absolute;
   }
 
   .seccionPrecio{
-    left: 300px;
+    margin-right: -600px;
     width: 100%;
     z-index: 100;
-    
+    margin-top: -15px;
   }
 
 
