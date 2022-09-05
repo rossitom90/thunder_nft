@@ -45,7 +45,6 @@ fetch('/nft.json')
                 </div> 
             </div>
 
-            
 
         </div>
         `
@@ -56,7 +55,6 @@ fetch('/nft.json')
         
 
     })
-
 
 
 // Filtro y renderizado Main
@@ -81,15 +79,11 @@ btnEther.addEventListener("click", eventEther);
 function eventEther(){
     
     const resultadoEther = datanft.filter((el) => el.blockchain.includes('Ethereum'))
-        
-   console.log(resultadoEther);
-   
-   
-    datanft.forEach((nftTarjeta) => {
+        console.log("Cantidad de NFT en blockchain Ethereum...")
+        console.log(resultadoEther);
 
-        const tarjeta = document.createElement('tarjeta')
-      
-       tarjeta.innerHTML =
+   
+   resultadoEther.innerHTML = 
        
         `
         <div class="cardAA">
@@ -119,7 +113,7 @@ function eventEther(){
         </div>
        `
     
-})}
+}
 
 
 
@@ -135,10 +129,10 @@ btnPoly.addEventListener("click", eventPoly);
 function eventPoly(){
 
     const resultadoPoly = datanft.filter((el) => el.blockchain.includes('Polygon'))
-        
+    console.log("Cantidad de NFT en blockchain Polygon...")
     console.log(resultadoPoly);
 
-    resultadoPoly.innerHTML = 
+   resultadoPoly.innerHTML = 
 
     `
     <div class="cardAA">
@@ -181,7 +175,7 @@ btnSol.addEventListener("click", eventSol);
 function eventSol(){
 
     const resultadoSol = datanft.filter((el) => el.blockchain.includes('Solana'))
-        
+    console.log("Cantidad de NFT en blockchain Solana...")
     console.log(resultadoSol);
    
     resultadoSol.innerHTML = 
@@ -217,85 +211,24 @@ function eventSol(){
 
 
 
+// Filtro Precio Max
 
 
 
+let btnVer = document.getElementById("filterVer");
+btnVer.addEventListener("click", funcEntrePrc);
 
+function funcEntrePrc(){
 
+    
+    let prcMaxx = document.getElementById ("ingresoMax").value;
 
+    
+    console.log("Numero Máximo elegido es: " + prcMaxx);
 
-
-
-
-
-
-
-
-
-
-/* const d = document;
-let palabraClave =  document.getElementById("palabraClav"); */
-
-/* document.querySelector('#palabraClav').
-addEventListener('input', filterlist)
-
-function filterlist = document.querySelector('#palabraClav')
-const filter = searchInput.value.toLowerCase()
-const listItems = document.querySelectorAll('.') */
-
-
-/* function searchFilter(input, selector){
-    palabraClave.addEventListener("keyup",(e) =>{
-        if(e.target.matches(input)){
-            console.log(e.key);
-
-            if(e.key ==="Escape")e.target.value = "";
-
-            d.querySelectorAll(selector).forEach((el) =>
-            el.textContent.toLowerCase().includes(e.target.value)
-            ?el.classList.remove("palabraClav")
-            :el.classList.add("palabraClav")
-            );
-        }
-    })
-} */
-
-
-/* let palabraClave =  document.getElementById("palabraClav").value;
-      let btnPalabra = document.getElementById("butPalabra");
-      
-      btnPalabra.addEventListener("keyup", valorPalabra);
-
-      
-      
-      function valorPalabra(){
-      } */
-
-// ----------------------- Filtro de Tarjetas ------------------------------
-/* function myFunction() {
-    const mi_muestra = JSON.parse(arreglo_muestra)
-    document.getElementById("demo").innerHTML = mi_muestra.filter(obtenerProductoPorId())
-  }
- */
-// ------------ Palabra clave:
-
-
-        
    
-// ------------ Minimos y Maximos: 
+    const resultadoMax = datanft.filter((Max) => Max.lastSale <= prcMaxx);
+    
+    console.log(resultadoMax);
 
-/* let minPRC = document.getElementById("minInput").value;
-let maxPRC = document.getElementById("maxInput").value;
-let butMinMax = document.getElementById("butMaxMin");
-
-butMinMax.onclick("click", valoresMaxMin);
-
-function valoresMinMax(){
-
-    if(minPRC>0 && maxPRC<minPRC){
-
-    }else{
-
-    }
-
-} */})
+}})

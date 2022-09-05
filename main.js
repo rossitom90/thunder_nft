@@ -100,7 +100,7 @@ $.ajax(liveprice).done(function(response){
 
 
 //------------Desestructuración 01-----------------
-console.log("--------------Desestructuración Crypto Punk---------------")
+
 
 /* const {collectionName, floorPrice} = CryptoPunk
 
@@ -134,8 +134,6 @@ console.log(tokenId); */
 
 
 
-
-console.log("--------------Filtrar NFT Crypto Punk---------------")
 
 
 /* const resultadoFavCr = nftCryptoPunk.filter((fav) => fav.favourites >= 12)
